@@ -29,12 +29,13 @@ h1 {
 .card {
   background-color: #ffe0b8;
   border-radius: 10px;
-  width: 255px;
+  width: 255px;  
+  box-shadow: #dab687;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: auto;
-  box-shadow: #dab687;
+
 }
 
 .card-img {
