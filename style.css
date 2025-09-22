@@ -34,6 +34,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: auto;
+  box-shadow: #dab687;
 }
 
 .card-img {
