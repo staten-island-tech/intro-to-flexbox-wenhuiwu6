@@ -160,4 +160,12 @@ const cats = [
   },
 ];
 
-
+function inject(item) {
+  let name = "Roman";
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
+}
+inject(products[0]);
+inject(products[0]);
+inject(products[0]);
+inject(products[0]);
