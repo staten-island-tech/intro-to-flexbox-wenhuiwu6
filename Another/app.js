@@ -92,80 +92,88 @@ const cats = [
     price: 2000,
     inStock: True,
     img: "https://www.catster.com/wp-content/uploads/2023/11/Scottish-Fold-Cat-laying-on-a-couch_Alexander-Sobol_Shutterstock-800x534.jpg",
-    alt: "The Scottish Fold is a distinctive breed of domestic cat characterised by a natural dominant gene mutation associated with osteochondrodysplasia. This genetic anomaly affects cartilage throughout the body, causing the ears to fold, bending forward and down towards the front of the head.",
+    alt: "The Scottish Fold is a distinctive breed of domestic cat characterised by a natural dominant gene mutation associated with osteochondrodysplasia.",
   },
 
   {
-    name: "Cheetoh", 
+    name: "Cheetoh",
     price: 4000,
-    inStock: True, 
-    img: "https://ygo-assets-entities-emea.yougov.net/b5fa9704-d028-11eb-a339-2fe1f0156679.jpg", 
-    alt: "",
+    inStock: True,
+    img: "https://ygo-assets-entities-emea.yougov.net/b5fa9704-d028-11eb-a339-2fe1f0156679.jpg",
+    alt: "He Cheetoh cat is a hybrid of Bengal and Ocicat breeds, known for its spotted coat and wild look.",
   },
 
   {
     name: "Exotic Short Hair",
     price: 1500,
-    inStock: True, 
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ginger_Exotic_Shorthair.jpg/800px-Ginger_Exotic_Shorthair.jpg", 
-    alt: "",
+    inStock: True,
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ginger_Exotic_Shorthair.jpg/800px-Ginger_Exotic_Shorthair.jpg",
+    alt: "The Exotic Shorthair is similar to the Persian but with a short, plush coat and a sweet nature.",
   },
 
   {
-    name: "",
-    price: ,
-    inStock: , 
-    img: "", 
-    alt: "",
+    name: "Abyssinian",
+    price: 1400,
+    inStock: true,
+    img: "https://upload.wikimedia.org/wikipedia/commons/6/69/Abyssinian_2.jpg",
+    alt: "The Abyssinian cat has a ticked coat and an energetic, intelligent personality.",
   },
-
   {
-    name: "",
-    price: ,
-    inStock: , 
-    img: "", 
-    alt: "",
+    name: "Birman",
+    price: 1600,
+    inStock: true,
+    img: "https://cdn.britannica.com/77/235277-050-0176FA60/Birman-cat.jpg",
+    alt: "The Birman is a sacred-looking cat with deep blue eyes and white 'gloves' on its paws.",
   },
-
   {
-    name: "",
-    price: ,
-    inStock: , 
-    img: "", 
-    alt: "",
+    name: "Oriental Shorthair",
+    price: 1300,
+    inStock: true,
+    img: "https://cdn.britannica.com/09/233209-050-406B2AFB/Oriental-Shorthair-cat.jpg",
+    alt: "The Oriental Shorthair is sleek and elegant, with large ears and a wide variety of coat colors.",
   },
-
   {
-    name: "", 
-    price: ,
-    inStock: , 
-    img: "", 
-    alt: "",
+    name: "Savannah",
+    price: 5000,
+    inStock: true,
+    img: "https://upload.wikimedia.org/wikipedia/commons/1/15/Savannah_Cat_closeup.jpg",
+    alt: "The Savannah is a tall, spotted hybrid cat from a cross between a serval and domestic cat.",
   },
-
   {
-    name: "",
-    price: ,
-    inStock: , 
-    img: "", 
-    alt: "",
+    name: "Turkish Van",
+    price: 1800,
+    inStock: true,
+    img: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Turkish_Van_Cat.jpg",
+    alt: "The Turkish Van is known as the 'swimming cat,' famous for its love of water and semi-long fur.",
   },
-
   {
-    name: "",
-    price: ,
-    inStock: , 
-    img: "", 
-    alt: "",
+    name: "Manx",
+    price: 1200,
+    inStock: true,
+    img: "https://upload.wikimedia.org/wikipedia/commons/4/47/Manx_cat_by_Lucy_Bowring.jpg",
+    alt: "The Manx is a tailless breed from the Isle of Man, known for its rounded appearance and playful nature.",
   },
 ];
 
-function inject(item) {
-  let name = "Roman";
+function injectAll(items) {
   const container = document.querySelector(".container");
-  container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
+  container.innerHTML = "";
+
+  items.forEach((item) => {
+    container.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div class="cat-card">
+        <img src="${item.img}" alt="${item.alt}" class="cat-img">
+        <h2>${item.name}</h2>
+        <p class="price">Price: $${item.price}</p>
+        <p>${item.alt}</p>
+        <p class="${item.inStock ? "stock" : "out-of-stock"}">
+          ${item.inStock ? "In stock" : "Out of stock"}
+        </p>
+      </div>
+      `
+    );
+  });
 }
-inject(products[0]);
-inject(products[0]);
-inject(products[0]);
-inject(products[0]);
+injectAll(cats);
