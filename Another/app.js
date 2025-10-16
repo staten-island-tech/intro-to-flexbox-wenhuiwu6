@@ -141,23 +141,17 @@ const cats = [
   },
 ];
 
-function inject(items) {
+function inject(item) {
   const container = document.querySelector(".container");
-
-  items.forEach((item) => {
-    const imageSrc = item.image || item.img;
-    container.insertAdjacentHTML(
-      "beforeend",
-      `
-      <div class="card">
-        <img src="${imageSrc}" alt="${item.alt}">
-        <h2>${item.name}</h2>
-        <p>Price: $${item.price}</p>
-        <p class="desc">${item.alt}</p>
-      </div>
-    `
-    );
-  });
+  const html = `
+    <div class="card">
+      <img src="${item.image}">
+      <h2>${item.name}</h2>
+      <p>${item.alt}</p>
+      <p>Price: $${item.price}</p>
+    </div>
+  `;
+  container.insertAdjacentHTML("afterbegin", html);
 }
 
-inject(cats);
+cats.forEach((item) => inject(item));
