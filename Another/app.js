@@ -6,131 +6,117 @@ const cats = [
     image: "MaineCoon.png",
     alt: "The Maine Coon is a large domesticated cat breed. One of the oldest natural breeds in North America, the breed originated in the U.S. state of Maine, where it is the official state cat.",
   },
-
   {
     name: "British Shorthair",
     price: 1200,
-    inStock: True,
-    img: "BritishShorthair.png",
+    inStock: true,
+    image: "BritishShorthair.png",
     alt: "The British Shorthair is the pedigree version of the traditional British domestic cat, with a distinctively stocky body, thick coat, and broad face.",
   },
-
   {
     name: "Persian",
     price: 1500,
-    inStock: True,
+    inStock: true,
     image: "Persian.png",
-    alt: "The Persian cat, also known as the Persian Longhair or simply Persian, is a long-haired traditional breed of cat characterised by a round face and petite, but not flat and not smashed in, muzzle.",
+    alt: "The Persian cat, also known as the Persian Longhair, is a long-haired traditional breed of cat characterised by a round face and petite muzzle.",
   },
-
   {
     name: "Siamese",
     price: 1000,
-    inStock: True,
+    inStock: true,
     image: "Siamese.png",
-    alt: "The Siamese cat is one of the first distinctly recognised breeds of Asian cat. It derives from the Wichianmat landrace. The Siamese cat is one of several varieties of cats native to Thailand. The original Siamese became one of the most popular breeds in Europe and North America in the 19th century",
+    alt: "The Siamese cat is one of the first distinctly recognised breeds of Asian cat, originating from Thailand.",
   },
-
   {
     name: "Bengal",
     price: 1800,
-    inStock: True,
+    inStock: true,
     image: "Bengal.png",
-    alt: "The Bengal cat is a breed of hybrid cat created from crossing of an Asian leopard cat with domestic cats, especially the spotted Egyptian Mau.",
+    alt: "The Bengal cat is a hybrid breed created from crossing an Asian leopard cat with domestic cats.",
   },
-
   {
     name: "Sphynx",
     price: 3000,
-    inStock: True,
+    inStock: true,
     image: "Sphynx.png",
-    alt: "The Sphynx cat also known as the Canadian Sphynx, is a breed of cat known for its lack of fur. Hairlessness in cats is a naturally occurring genetic mutation, and the Sphynx was developed through selective breeding of these animals, starting in the 1960s.",
+    alt: "The Sphynx cat is a hairless breed developed through selective breeding of naturally occurring hairless cats.",
   },
-
   {
     name: "Siberian",
     price: 1700,
-    inStock: True,
+    inStock: true,
     image: "Siberian.png",
-    alt: "The Siberian is a centuries-old landrace of domestic cat in Russia, and recently developed as a formal breed with standards promulgated the world over since the late-1980s. Since 2006, the breed is recognised for registry and championship status with all major cat registries.",
+    alt: "The Siberian is a centuries-old Russian landrace of domestic cat with long, thick fur.",
   },
-
   {
     name: "Norwegian Forest",
     price: 2000,
-    inStock: True,
+    inStock: true,
     image: "NorwegianForest.png",
-    alt: "The Norwegian Forest Cat is a breed of domestic cat originating in Northern Europe. This landrace breed is adapted to a very cold climate, with a top coat of long, glossy hair and a woolly undercoat for insulation.",
+    alt: "The Norwegian Forest Cat is a breed from Northern Europe, adapted to very cold climates.",
   },
-
   {
     name: "Domestic Shorthair",
     price: 300,
-    inStock: True,
+    inStock: true,
     image: "DomesticShorthair.png",
-    alt: "A moggy is any cat which has not been intentionally bred. Moggies lack a consistent appearance unlike purebred cats that are selectively bred for appearance conforming to a standard.",
+    alt: "A moggy or domestic shorthair is a non-pedigree cat with a mix of different ancestries.",
   },
-
   {
     name: "Ragdoll",
     price: 2200,
-    inStock: True,
+    inStock: true,
     image: "Ragdoll.png",
-    alt: "The Ragdoll is a breed of cat with a distinct colorpoint coat and blue eyes. Its morphology is large and weighty, and it has a semi-long and silky soft coat. American breeder Ann Baker developed Ragdolls in the 1960s. They are best known for their docile, placid temperament and affectionate nature.",
+    alt: "The Ragdoll is a large, affectionate breed with blue eyes and a silky coat.",
   },
-
   {
     name: "Felis Catus",
     price: 1300,
-    inStock: True,
+    inStock: true,
     image: "FelisCatus.png",
-    alt: "The cat, also referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the family Felidae. Advances in archaeology and genetics have shown that the domestication of the cat occurred in the Near East around 7500 BC.",
+    alt: "The domestic cat is the only domesticated species of the family Felidae.",
   },
-
   {
     name: "Scottish Fold",
     price: 2000,
-    inStock: True,
+    inStock: true,
     image: "ScottishFold.png",
-    alt: "The Scottish Fold is a distinctive breed of domestic cat characterised by a natural dominant gene mutation associated with osteochondrodysplasia.",
+    alt: "The Scottish Fold is known for its unique folded ears caused by a natural genetic mutation.",
   },
-
   {
     name: "Cheetoh",
     price: 4000,
-    inStock: True,
+    inStock: true,
     image: "Cheetoh.png",
-    alt: "He Cheetoh cat is a hybrid of Bengal and Ocicat breeds, known for its spotted coat and wild look.",
+    alt: "The Cheetoh cat is a hybrid of Bengal and Ocicat breeds, known for its spotted coat.",
   },
-
   {
     name: "Exotic Short Hair",
     price: 1500,
-    inStock: True,
+    inStock: true,
     image: "ExoticShortHair.png",
-    alt: "The Exotic Shorthair is similar to the Persian but with a short, plush coat and a sweet nature.",
+    alt: "The Exotic Shorthair is similar to the Persian but with a short, plush coat.",
   },
-
   {
     name: "Abyssinian",
     price: 1400,
     inStock: true,
     image: "Abyssinian.png",
-    alt: "The Abyssinian cat has a ticked coat and an energetic, intelligent personality.",
+    alt: "The Abyssinian has a ticked coat and an energetic, intelligent personality.",
   },
   {
     name: "Birman",
     price: 1600,
     inStock: true,
     image: "Birman.png",
-    alt: "The Birman is a sacred-looking cat with deep blue eyes and white 'gloves' on its paws.",
+    alt: "The Birman has deep blue eyes and white 'gloves' on its paws.",
   },
   {
     name: "Oriental Shorthair",
     price: 1300,
     inStock: true,
     image: "OrientalShorthair.png",
-    alt: "The Oriental Shorthair is sleek and elegant, with large ears and a wide variety of coat colors.",
+    alt: "The Oriental Shorthair is sleek and elegant, with large ears and many coat colors.",
   },
   {
     name: "Savannah",
@@ -144,19 +130,34 @@ const cats = [
     price: 1800,
     inStock: true,
     image: "TurkishVan.png",
-    alt: "The Turkish Van is known as the 'swimming cat,' famous for its love of water and semi-long fur.",
+    alt: "The Turkish Van is famous for its love of water and semi-long fur.",
   },
   {
     name: "Manx",
     price: 1200,
     inStock: true,
     image: "Manx.png",
-    alt: "The Manx is a tailless breed from the Isle of Man, known for its rounded appearance and playful nature.",
+    alt: "The Manx is a tailless breed from the Isle of Man, known for its rounded look and playful nature.",
   },
 ];
 
-function Catsale(cats) {
-  let name = "Cat";
+function inject(items) {
   const container = document.querySelector(".container");
-  container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
+
+  items.forEach((item) => {
+    const imageSrc = item.image || item.img;
+    container.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div class="card">
+        <img src="${imageSrc}" alt="${item.alt}">
+        <h2>${item.name}</h2>
+        <p>Price: $${item.price}</p>
+        <p class="desc">${item.alt}</p>
+      </div>
+    `
+    );
+  });
 }
+
+inject(cats);
