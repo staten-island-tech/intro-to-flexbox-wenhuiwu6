@@ -143,79 +143,32 @@ const cats = [
 
 function inject(item) {
   const container = document.querySelector(".container");
-  const html = `
-    <div class="card">
+  const html = ` <div class="card">
       <img src="${item.image}">
       <h2>${item.name}</h2>
       <p>${item.alt}</p>
       <p>Price: $${item.price}</p>
       <button class="add-btn">Add to Cart</button>
-    </div>
-  `;
+    </div>`;
   container.insertAdjacentHTML("afterbegin", html);
 }
 
 cats.forEach((item) => inject(item));
 
-const cartItems = [];
 const cartList = document.querySelector(".cart-items");
-const totalDisplay = document.querySelector(".total");
 
-function addToCart() {
-  const buttons = document.querySelectorAll(".add-btn");
-  const btnArray = Array.from(buttons);
-
-  btnArray.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-      const card = event.target.closest(".card");
-      const title = card.getAttribute("data-title");
-      const price = Number(card.getAttribute("data-price"));
-
-      console.log("Added:", title, "Price:", price);
-
-      // Add to cart array
-      cartItems.push({ title, price });
-      updateCart();
-    })
-  );
-}
-
-function updateCart() {
-  cartList.innerHTML = "";
-  let total = 0;
-
-  cartItems.forEach((item) => {
-    total += item.price;
-    const li = document.createElement("li");
-    li.textContent = `${item.title} - $${item.price}`;
-    cartList.appendChild(li);
-  });
-
-  totalDisplay.textContent = `Total: $${total}`;
-}
-
-// Call your function
-addToCart();
-
-// ======== Filtering (still works with inject + addToCart) ========
-document.querySelectorAll(".buttons button").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const filter = btn.dataset.filter;
-    const container = document.querySelector(".container");
-    container.innerHTML = ""; // clear old cards
-
-    let filtered = [];
-    if (filter === "cheap") filtered = cats.filter((c) => c.price < 1500);
-    else if (filter === "mid")
-      filtered = cats.filter((c) => c.price >= 1500 && c.price <= 2500);
-    else if (filter === "expensive")
-      filtered = cats.filter((c) => c.price > 2500);
-    else filtered = cats;
-
-    filtered.forEach((cat) => inject(cat));
-    addToCart(); // reattach events after filtering
-  });
-});
+// function addToCart() {
+//   const buttons = document.querySelectorAll(".add-btn");
+//   const btnArray = Array.from(buttons);
+//   btnArray.forEach((btn) =>
+//     btn.addEventListener("click", function (event) {
+//       const card = event.target.closest(".card");
+//       const title = card.getAttribute("data-title");
+//       const price = Number(card.getAttribute("data-price"));
+//     })
+//   );
+// }
+// addToCart();
 
 // function addToCart() {
 //   const buttons = document.querySelectorAll("button");
