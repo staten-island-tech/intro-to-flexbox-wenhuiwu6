@@ -155,7 +155,7 @@ function inject(item) {
 
 cats.forEach((item) => inject(item));
 
-const cartList = document.querySelector(".cart-items");
+// const cartList = document.querySelector(".cart-items");
 
 // function addToCart() {
 //   const buttons = document.querySelectorAll(".add-btn");
@@ -170,16 +170,16 @@ const cartList = document.querySelector(".cart-items");
 // }
 // addToCart();
 
-// function addToCart() {
-//   const buttons = document.querySelectorAll("button");
-//   const btnArray = Array.from(buttons);
-//   btnArray.forEach((btn) =>
-//     btn.addEventListener("click", function (event) {
-//       console.log(event.target.textContent);
-//       console.log(
-//         event.target.closest(".display-card").getAttribute("data-title")
-//       );
-//     })
-//   );
-// }
-// addToCart();
+function addToCart() {
+  const buttons = document.querySelectorAll("button");
+  const btnArray = Array.from(buttons);
+  btnArray.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      console.log(event.target.textContent);
+      console.log(
+        event.target.closest(".display-card").getAttribute("data-title")
+      );
+    })
+  );
+}
+addToCart();
