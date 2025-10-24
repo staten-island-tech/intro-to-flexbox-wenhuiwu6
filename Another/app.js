@@ -143,43 +143,40 @@ const cats = [
 
 function inject(item) {
   const container = document.querySelector(".container");
-  const html = ` <div class="card">
-      <img src="${item.image}">
-      <h2>${item.name}</h2>
-      <p>${item.alt}</p>
-      <p>Price: $${item.price}</p>
-      <button class="add-btn">Add to Cart</button>
+  const html = ` <div class="card" data-name="${item.name}" data-img="${item.image}" data-alt="${item.alt}" >
+      <img class = "card-img" src="${item.image}">
+      <h2 class = "card-name"> ${item.name}</h2>
+      <p class = "card-alt"> ${item.alt}</p>
+      <p class = "card-price> price: $${item.price}</p>
+      <button class="add-btn"> Add to Cart</button>
     </div>`;
   container.insertAdjacentHTML("afterbegin", html);
 }
 
 cats.forEach((item) => inject(item));
 
-// const cartList = document.querySelector(".cart-items");
-
-// function addToCart() {
-//   const buttons = document.querySelectorAll(".add-btn");
-//   const btnArray = Array.from(buttons);
-//   btnArray.forEach((btn) =>
-//     btn.addEventListener("click", function (event) {
-//       const card = event.target.closest(".card");
-//       const title = card.getAttribute("data-title");
-//       const price = Number(card.getAttribute("data-price"));
-//     })
-//   );
-// }
-// addToCart();
-
 function addToCart() {
-  const buttons = document.querySelectorAll("button");
+  const buttons = document.querySelectorAll(".add-btn");
   const btnArray = Array.from(buttons);
   btnArray.forEach((btn) =>
     btn.addEventListener("click", function (event) {
       console.log(event.target.textContent);
-      console.log(
-        event.target.closest(".display-card").getAttribute("data-title")
-      );
+      console.log(event.target.closest(".card").getAttribute("data-name"));
     })
   );
 }
 addToCart();
+
+// function addToCart() {
+//   const buttons = document.querySelectorAll("button");
+//   const btnArray = Array.from(buttons);
+//   btnArray.forEach((btn) =>
+//     btn.addEventListener("click", function (event) {
+//       console.log(event.target.textContent);
+//       console.log(
+//         event.target.closest(".display-card").getAttribute("data-title")
+//       );
+//     })
+//   );
+// }
+// addToCart();
