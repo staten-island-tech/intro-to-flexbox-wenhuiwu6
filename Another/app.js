@@ -143,12 +143,12 @@ const cats = [
 
 function inject(item) {
   const container = document.querySelector(".container");
-  const html = ` <div class="card" data-name="${item.name}" data-img="${item.image}" data-alt="${item.alt}" >
+  const html = ` <div class="card" data-name="${item.name}" data-img="${item.image}" data-alt="${item.alt}" data-price="${item.price}" >
       <img class = "card-img" src="${item.image}">
       <h2 class = "card-name"> ${item.name}</h2>
       <p class = "card-alt"> ${item.alt}</p>
-      <p class = "card-price> price: $${item.price}</p>
-      <button class="add-btn"> Add to Cart</button>
+      <p class = "card-price"> price: $${item.price}</p>
+      <button class="button"> Add to Cart</button>
     </div>`;
   container.insertAdjacentHTML("afterbegin", html);
 }
@@ -156,16 +156,35 @@ function inject(item) {
 cats.forEach((item) => inject(item));
 
 function addToCart() {
-  const buttons = document.querySelectorAll(".add-btn");
+  const buttons = document.querySelectorAll(".button");
   const btnArray = Array.from(buttons);
   btnArray.forEach((btn) =>
     btn.addEventListener("click", function (event) {
       console.log(event.target.textContent);
-      console.log(event.target.closest(".card").getAttribute("data-name"));
+      console.log(
+        event.target.closest(".card").getAttribute("data-name"),
+        event.target.closest(".card").getAttribute("data-price")
+      );
     })
   );
 }
 addToCart();
+
+function filter() {
+  const buttons = document.querySelectorAll(".different");
+  const btnArray = Array.from(different);
+  btnArray.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      console.log(event.target.textContent);
+      console.log();
+    })
+  );
+}
+filter();
+
+const filter [
+  
+]
 
 // function addToCart() {
 //   const buttons = document.querySelectorAll("button");
