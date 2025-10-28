@@ -155,8 +155,6 @@ function inject(item) {
 
 cats.forEach((item) => inject(item));
 
-let total = 0;
-
 function addToCart() {
   const buttons = document.querySelectorAll(".button");
   const btnArray = Array.from(buttons);
@@ -167,7 +165,7 @@ function addToCart() {
         event.target.closest(".card").getAttribute("data-name"),
         event.target.closest(".card").getAttribute("data-price")
       );
-      showCartItem(
+      cart(
         event.target.closest(".card").getAttribute("data-name"),
         event.target.closest(".card").getAttribute("data-price")
       );
@@ -176,14 +174,8 @@ function addToCart() {
 }
 addToCart();
 
-function showCartItem(name, price) {
-  const cart = document.querySelector(".cart");
-  total += Number(price);
-  const html = `
-    <p>${name} , $${price}</p>
-    <p>Total: $${total}</p>
-  `;
-  cart.insertAdjacentHTML("afterbegin", html);
+function cart() {
+  const buttons = document.querySelectorAll(".cart");
 }
 
 // function addToCart() {
