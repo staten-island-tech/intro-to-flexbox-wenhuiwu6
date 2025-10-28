@@ -155,6 +155,8 @@ function inject(item) {
 
 cats.forEach((item) => inject(item));
 
+let total = 0;
+
 function addToCart() {
   const buttons = document.querySelectorAll(".button");
   const btnArray = Array.from(buttons);
@@ -165,26 +167,24 @@ function addToCart() {
         event.target.closest(".card").getAttribute("data-name"),
         event.target.closest(".card").getAttribute("data-price")
       );
+      showCartItem(
+        event.target.closest(".card").getAttribute("data-name"),
+        event.target.closest(".card").getAttribute("data-price")
+      );
     })
   );
 }
 addToCart();
 
-function filter() {
-  const buttons = document.querySelectorAll(".different");
-  const btnArray = Array.from(different);
-  btnArray.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-      console.log(event.target.textContent);
-      console.log();
-    })
-  );
+function showCartItem(name, price) {
+  const cart = document.querySelector(".cart");
+  total += Number(price);
+  const html = `
+    <p>${name} , $${price}</p>
+    <p>Total: $${total}</p>
+  `;
+  cart.insertAdjacentHTML("afterbegin", html);
 }
-filter();
-
-const filter [
-  
-]
 
 // function addToCart() {
 //   const buttons = document.querySelectorAll("button");
