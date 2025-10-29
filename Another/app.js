@@ -165,7 +165,7 @@ function addToCart() {
         event.target.closest(".card").getAttribute("data-name"),
         event.target.closest(".card").getAttribute("data-price")
       );
-      cart(
+      cost(
         event.target.closest(".card").getAttribute("data-name"),
         event.target.closest(".card").getAttribute("data-price")
       );
@@ -174,9 +174,7 @@ function addToCart() {
 }
 addToCart();
 
-function cart() {
-  const buttons = document.querySelectorAll(".cart");
-}
+function filter() {}
 
 // function addToCart() {
 //   const buttons = document.querySelectorAll("button");
