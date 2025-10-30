@@ -164,12 +164,27 @@ function addToCart() {
       console.log(
         event.target.closest(".card").getAttribute("data-name"),
         event.target.closest(".card").getAttribute("data-price")
+      cart
       );
     })
   );
 }
 addToCart();
 
+function filter() {
+  const filters = document.querySelectorAll(".filter");
+  const btnArray = Array.from(button);
+  btn.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      console.log(event, target.textConent);
+      console.log(
+        event.target.closest(".card").getAttribute("data-name"),
+        event.target.closest(".card").getAttribute("data-price")
+      );
+    })
+  );
+}
+cart.push
 // function addToCart() {
 //   const buttons = document.querySelectorAll("button");
 //   const btnArray = Array.from(buttons);
