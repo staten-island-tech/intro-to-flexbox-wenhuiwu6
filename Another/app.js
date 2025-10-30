@@ -165,16 +165,10 @@ function addToCart() {
         event.target.closest(".card").getAttribute("data-name"),
         event.target.closest(".card").getAttribute("data-price")
       );
-      cost(
-        event.target.closest(".card").getAttribute("data-name"),
-        event.target.closest(".card").getAttribute("data-price")
-      );
     })
   );
 }
 addToCart();
-
-function filter() {}
 
 // function addToCart() {
 //   const buttons = document.querySelectorAll("button");
