@@ -16,12 +16,12 @@ h1 {
   color: #1d1d1d;
 }
 
-.buttons {
+.button {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.buttons button {
+.button button {
   background-color: #ffbf60;
   border: none;
   padding: 10px 20px;

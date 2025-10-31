@@ -184,6 +184,15 @@ function showFilter() {
 
 showFilter();
 
+let insideCart=0
+function insideCart() {
+  const cart = document.querySelectorAll(".cart");
+  cart.forEach((item)) => {inject(insideCart = insideCart + item.price)
+  console.log(insideCart)};
+}
+
+
+
 // function addToCart() {
 //   const buttons = document.querySelectorAll("button");
 //   const btnArray = Array.from(buttons);
