@@ -140,16 +140,21 @@ function addToCart() {
   const btnArray = Array.from(buttons);
   btnArray.forEach((btn) =>
     btn.addEventListener("click", function (event) {
-      console.log(event.target.textContent);
-      console.log(
-        event.target.closest(".card").getAttribute("data-name"),
-        event.target.closest(".card").getAttribute("data-price")
-      );
+      const cart = document.querySelector(".cart");
+      const name = event.target.closest(".card").getAttribute("data-name");
+      const price = event.target.closest(".card").getAttribute("data-price");
+
+      const html = `<div class="cart-item" data-price="${price}"> ${name} : $${price}</div>`;
+      cart.insertAdjacentHTML("afterbegin", html);
+
+      insideCart();
     })
   );
 }
+
 addToCart();
 
+// .remove is to remove used here it to remove all the extra cards that does not belong into the category of the card
 function filter(type) {
   const container = document.querySelector(".container");
   document.querySelectorAll(".card").forEach((card) => {
@@ -184,14 +189,21 @@ function showFilter() {
 
 showFilter();
 
-let insideCart=0
+// the + in +item.getAttribute("data-price"); is used for converting the string(number of price) to a number
+// strings cannot be added up
 function insideCart() {
-  const cart = document.querySelectorAll(".cart");
-  cart.forEach((item)) => {inject(insideCart = insideCart + item.price)
-  console.log(insideCart)};
+  const cart = document.querySelector(".cart");
+  document.querySelectorAll(".cart-total").forEach((old) => {
+    old.remove();
+  });
+  const cartItems = document.querySelectorAll(".cart-item");
+  cartTotal = 0;
+  cartItems.forEach((item) => {
+    cartTotal += +item.getAttribute("data-price");
+  });
+  const html = `<div class="cart-total"> Total: $${cartTotal}</div>`;
+  cart.insertAdjacentHTML("afterbegin", html);
 }
-
-
 
 // function addToCart() {
 //   const buttons = document.querySelectorAll("button");
