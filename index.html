@@ -1,123 +1,22 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cat Gallery</title>
-
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Cats On Sale</h1>
-
-    <div class="gallery" id="cat-gallery">
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://pethelpful.com/.image/w_3840,q_auto:good,c_fill,ar_4:3/NDowMDAwMDAwMDAwMDYyOTgx/silver-maine-coon.jpg"
-        />
-        <h2 class="card-header">Maine Coon</h2>
-        <h3 class="card-price">$2,500</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://www.catster.com/wp-content/uploads/2023/11/grey-and-white-british-shorthair-cat_Nynke-van-Holten_Shutterstock-e1720621991666.jpg"
-        />
-        <h2 class="card-header">British Shorthair</h2>
-        <h3 class="card-price">$1,200</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://moderncat.com/wp-content/uploads/2025/03/ss_2510990453_Akifyeva-S-1-940x640.jpg"
-        />
-        <h2 class="card-header">Persian</h2>
-        <h3 class="card-price">$1,500</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fca42f04-2474-4302-a238-990c8aebfe8c/Siamese_cat_1110x740.jpg?w=3840&q=75&auto=format"
-        />
-        <h2 class="card-header">Siamese</h2>
-        <h3 class="card-price">$1,000</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://consumer-cms.petfinder.com/sites/default/files/images/content/Bengal%204.jpg"
-        />
-        <h2 class="card-header">Bengal</h2>
-        <h3 class="card-price">$1,800</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://i.guim.co.uk/img/media/6bddcc4d11116c1d28a452023ad5523012b2f572/146_619_4372_2623/master/4372.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=62620d518227d5e74123cfc09645de10"
-        />
-        <h2 class="card-header">Sphynx</h2>
-        <h3 class="card-price">$3,000</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Murmur%27s_Siberian_Cat_siberiano_golden_%28cropped%29.JPG"
-        />
-        <h2 class="card-header">Siberian</h2>
-        <h3 class="card-price">$1,700</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRNYDK2kc57_dqnV1CUwyyexggV5ciY0eF5RF5vBKRkEF8ZmSbvbkv7nxII9EBwJ4mEIbggIfd8Pecb_yB90hiUmvlkCNweoiyFA__Sjw"
-        />
-        <h2 class="card-header">Norwegian Forest</h2>
-        <h3 class="card-price">$2,000</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://consumer-cms.petfinder.com/sites/default/files/images/content/Domestic%20Shorthair%20Cat%204.jpg"
-        />
-        <h2 class="card-header">Domestic Shorthair</h2>
-        <h3 class="card-price">$300</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://www.zooplus.co.uk/magazine/wp-content/uploads/2019/07/ragdoll-kitten.webp"
-        />
-        <h2 class="card-header">Ragdoll</h2>
-        <h3 class="card-price">$2,200</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://inaturalist-open-data.s3.amazonaws.com/photos/294212361/original.jpg"
-        />
-        <h2 class="card-header">Felis Catus</h2>
-        <h3 class="card-price">$1,300</h3>
-      </div>
-
-      <div class="card">
-        <img
-          class="card-img"
-          src="https://www.catster.com/wp-content/uploads/2023/11/Scottish-Fold-Cat-laying-on-a-couch_Alexander-Sobol_Shutterstock-800x534.jpg"
-        />
-        <h2 class="card-header">Scottish Fold</h2>
-        <h3 class="card-price">$2,000</h3>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cats on Sale</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Cats On Sale</h1>
+    <div class="filter">
+      <button data-filter="all">All</button>
+      <button data-filter="low">Under $1500</button>
+      <button data-filter="mid">Between $1500 - $2500</button>
+      <button data-filter="high">Above $2500</button>
     </div>
-  </body>
+  <div class="container"></div>
+  <h3>Cart</h3>
+  <div class="cart">
+  </div>
+  <script src="app.js"></script>
+</body>
 </html>
