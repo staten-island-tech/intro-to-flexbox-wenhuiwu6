@@ -1,4 +1,4 @@
-const cart = [
+const carts = [
   { name: "Apples", price: 3.5, quantity: 4 },
   { name: "Milk", price: 4.75, quantity: 2 },
   { name: "Steak", price: 15.99, quantity: 3 },
@@ -7,5 +7,10 @@ const cart = [
 ];
 
 function total(cart) {
-  return total;
+  let price = 0;
+  carts.forEach(function (cart)) {
+    if price
+  }
 }
+
+

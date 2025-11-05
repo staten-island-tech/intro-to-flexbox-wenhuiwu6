@@ -144,24 +144,11 @@ function addToCart() {
       const name = event.target.closest(".card").getAttribute("data-name");
       const price = event.target.closest(".card").getAttribute("data-price");
 
-      const html = `<div class="cart-item" data-price="${price}"> ${name} : $${price} 
-      <button class="remove-btn">Remove</button></div>`;
+      const html = `<div class="cart-item" data-price="${price}"> ${name} : $${price}`;
       cart.insertAdjacentHTML("afterbegin", html);
-
       insideCart();
-      RemoveButtons();
     })
   );
-}
-
-function RemoveButtons() {
-  const removeButtons = document.querySelectorAll(".remove-btn");
-  removeButtons.forEach((btn) => {
-    btn.onclick = function (event) {
-      event.target.parentElement.remove();
-      insideCart();
-    };
-  });
 }
 
 addToCart();
