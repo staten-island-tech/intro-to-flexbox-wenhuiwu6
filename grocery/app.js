@@ -1,16 +1,14 @@
-const carts = [
-  { name: "Apples", price: 3.5, quantity: 4 },
-  { name: "Milk", price: 4.75, quantity: 2 },
-  { name: "Steak", price: 15.99, quantity: 3 },
-  { name: "Cereal", price: 5.25, quantity: 1 },
-  { name: "Bananas", price: 1.25, quantity: 6 },
-];
-
 function total(cart) {
-  let price = 0;
-  carts.forEach(function (cart)) {
-    if price
+  let total = 0;
+  cart.forEach((item) => {
+    let price = item.price;
+    if (price < 5) {
+      price = price * 0.95;
+    }
+    total = total + price * item.quantity;
+  });
+  if (total > 100) {
+    total = total * 0.9;
   }
+  return total;
 }
-
-
