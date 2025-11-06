@@ -153,12 +153,9 @@ function addToCart() {
 
 addToCart();
 
-// .remove is to remove used here it to remove all the extra cards that does not belong into the category of the card
 function filter(type) {
   const container = document.querySelector(".container");
-  document.querySelectorAll(".card").forEach((card) => {
-    card.remove();
-  });
+  container.innerHTML = "";
   cats.forEach(function (cat) {
     if (type === "all") {
       inject(cat);
@@ -188,17 +185,13 @@ function showFilter() {
 
 showFilter();
 
-// the + in +item.getAttribute("data-price"); is used for converting the string(number of price) to a number
-// strings cannot be added up
 function insideCart() {
   const cart = document.querySelector(".cart");
-  document.querySelectorAll(".cart-total").forEach((old) => {
-    old.remove();
-  });
+  document.querySelectorAll(".cart-total").forEach(() => {});
   const cartItems = document.querySelectorAll(".cart-item");
-  cartTotal = 0;
+  let cartTotal = 0;
   cartItems.forEach((item) => {
-    cartTotal += +item.getAttribute("data-price");
+    cartTotal += Number(item.getAttribute("data-price"));
   });
   const html = `<div class="cart-total"> Total: $${cartTotal}</div>`;
   cart.insertAdjacentHTML("afterbegin", html);
