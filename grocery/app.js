@@ -42,8 +42,21 @@ const dnsRecords = [
 function findDNS(records, target) {
   let low = 0;
   let high = records.length - 1;
+
   while (low <= high) {
     let mid = Math.floor((low + high) / 2);
+    if (records[mid].address === target) {
+      return records[mid].dns;
+    } else if (records[mid].address < target) {
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
   }
+
+  return "DNS not found";
 }
 console.log(findDNS(dnsRecords, "google.com"));
+console.log(findDNS(dnsRecords, "reddit.com"));
+console.log(findDNS(dnsRecords, "nasa.gov"));
+console.log(findDNS(dnsRecords, "openai.com"));
