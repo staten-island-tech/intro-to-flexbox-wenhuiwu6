@@ -1,7 +1,4 @@
-function ChristmasTrees(N, H) {
-  let N = 4;
-  let H = 
-  while ()
-
-  return "";
+takeNumber(23, ["TAKE", "TAKE", "SERVE", "TAKE", "SERVE", "SERVE", "CLOSE"]);
+function takeNumber(num, list) {
+  if ()
 }
